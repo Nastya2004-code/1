@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+* {
+  /* зовнійшній відступ */
+  margin: 0;
+  /*внутрішній відступ  */
+  padding: 0;
+  /* властивість блокового елементу */
+  box-sizing: border-box;
+  /* шрифт */
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  /* властивості блокового елемента при використанні технології флекс */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* висота */
+  height: 100vh;
+  /* колір */
+  background-color: #1c1c1c;
+}
+
+.calculator {
+  background-color: #1c1c1c;
+  /* обводка */
+  border-radius: 20px;
+  /* тінь */
+  box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.05),
+    10px 10px 15px rgba(0, 0, 0, 0.5),
+    inset -8px -8px 15px rgba(255, 255, 255, 0.05),
+    inset 10px 10px 15px rgba(0, 0, 0, 0.5);
+  padding: 30px;
+  /* ширина */
+  width: 350px;
+}
+
+.display {
+  background-color: #1c1c1c;
+  border-radius: 15px;
+  box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.05),
+    10px 10px 15px rgba(0, 0, 0, 0.5),
+    inset -8px -8px 15px rgba(255, 255, 255, 0.05),
+    inset 10px 10px 15px rgba(0, 0, 0, 0.5);
+  color: #ffffff;
+  font-size: 36px;
+  font-weight: 700;
+  padding: 20px;
+  /* вирівнювання тексту */
+  text-align: right;
+  margin-bottom: 20px;
+}
+
+.buttons {
+  /* властивості при використанні технології грід */
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+}
+/* стилі кнопки */
+button {
+  background-color: #1c1c1c;
+  border: none;
+  border-radius: 15px;
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 700;
+  padding: 20px;
+  cursor: pointer;
+  box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.05),
+    10px 10px 15px rgba(0, 0, 0, 0.5),
+    inset -8px -8px 15px rgba(255, 255, 255, 0.05),
+    inset 10px 10px 15px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s;
+}
+/* стилі кнопки при наведенні */
+button:hover {
+  box-shadow: -4px -4px 8px rgba(255, 255, 255, 0.05),
+    5px 5px 8px rgba(0, 0, 0, 0.5),
+    inset -4px -4px 8px rgba(255, 255, 255, 0.05),
+    inset 5px 5px 8px rgba(0, 0, 0, 0.5);
+}
+
+button.operator {
+  color: #ff9500;
+}
+
+button.equal {
+  background-color: #007aff;
+  color: #ffffff;
+}
